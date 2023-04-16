@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>RailsApp</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css", integrity: "sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==", crossorigin: "anonymous", referrerpolicy: "no-referrer" %>
+    <%= javascript_importmap_tags %>
+  </head>
+  <body>
+    <!-- ヘッダー -->
+    <header id="header">
+      <div class="main">
+        <%= link_to "Ruby on Rails", root_path, class: "logo" %>
+        <nav class="nav">
+          <ul>
+            <li><%= link_to "メニュー", "#" %></li>
+            <li><%= link_to "プロフィール", "#" %></li>
+            <li><%= link_to "設定", "#" %></li>
+            <li><%= link_to "ログアウト", "#" %></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="sub">
+        <div class="breadcrumbs">
+          <%= breadcrumbs.render format: :inline, separator: ">" %>
+        </div>
+      </div>
+    </header>
+    <!-- サイドメニュー -->
+    <nav id="sidebar">
+      <input type="checkbox" id="sidebar-toggle" />
+      <label id="sidebar-toggle-label" for="sidebar-toggle">
+        <i class="fas fa-bars"></i>
+      </label>
+      <ul>
+        <li>
+          <%= link_to "#" do %>
+            <i class="fa-solid fa-house"></i>
+            <span>ホーム</span>
+          <% end %>
+        </li>
+        <li>
+          <%= link_to projects_path do %>
+            <i class="fa-solid fa-list-check"></i>
+            <span>プロジェクト</span>
+          <% end %>
+        </li>
+      </ul>
+    </nav>
+    <!-- メイン -->
+    <main id="content">
+      <%= render "partials/flash" %>
+      <%= yield %>
+    </main>
+  </body>
+</html>

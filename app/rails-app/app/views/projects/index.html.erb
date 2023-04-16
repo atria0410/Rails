@@ -1,0 +1,19 @@
+<div class="container-fluid">
+  <%= link_to "追加", new_project_path, class: "btn btn-primary" %>
+  <table class="table  table-bordered table-striped mt-2">
+    <thead>
+      <tr>
+        <th>No</th>
+        <th>名前</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @projects.each do |project| %>
+        <tr>
+          <td></td>
+          <td><%= link_to project.name, edit_project_path(project) %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

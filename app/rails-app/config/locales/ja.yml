@@ -1,0 +1,22 @@
+ja:
+  models:
+    project: 'プロジェクト'
+    task: 'タスク'
+  activerecord:
+    attributes:
+      project:
+        name: 'プロジェクト名'
+        tasks: 'タスク'
+      project/tasks:
+        name: 'タスク名'
+      task:
+        name: 'タスク名'
+      created_at: '作成日'
+      updated_at: '更新日'
+
+  # パンくずリスト
+  breadcrumbs:
+    home: 'ホーム'
+    projects: 'プロジェクト一覧'
+    new_project: 'プロジェクト登録'
+    edit_project: 'プロジェクト編集'

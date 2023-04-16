@@ -1,0 +1,37 @@
+{
+  "name": "app",
+  "dockerComposeFile": "../docker-compose.dev.yml",
+  "service": "app",
+  "workspaceFolder": "/app/rails-app",
+
+  "extensions": [
+    "rebornix.ruby",
+    "misogi.ruby-rubocop",
+    "KoichiSasada.vscode-rdbg",
+    "kaiwood.endwise",
+    "aliariff.vscode-erb-beautify",
+    "esbenp.prettier-vscode",
+    "shardulm94.trailing-spaces",
+    "streetsidesoftware.code-spell-checker",
+    "glenn2223.live-sass"
+  ],
+
+  "settings": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "editor.formatOnSaveTimeout": 5000,
+    "editor.guides.bracketPairs": true,
+    "editor.bracketPairColorization.enabled": true,
+    "files.associations": {
+      "*.html.erb": "erb"
+    },
+    "[ruby]": {
+      "editor.defaultFormatter": "misogi.ruby-rubocop"
+    },
+    "[erb]": {
+      "editor.defaultFormatter": "aliariff.vscode-erb-beautify"
+    }
+  },
+
+  "shutdownAction": "none"
+}
