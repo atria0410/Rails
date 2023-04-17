@@ -23,6 +23,7 @@ class ProjectsController < ApplicationController
     if @project.save
       redirect_to projects_url
     else
+      @project.tasks.build unless @project.tasks.present?
       render 'new', status: :unprocessable_entity
     end
   end

@@ -145,3 +145,16 @@ $sidebar-close-width: 60px;
   padding: 10px;
   min-height: calc(100vh - $header-height);
 }
+
+.remove-btn-td {
+  text-align: center;
+  vertical-align: middle;
+  padding: 0 !important;
+  font-size: 25px;
+
+  a {
+    i {
+      color: red;
+    }
+  }
+}

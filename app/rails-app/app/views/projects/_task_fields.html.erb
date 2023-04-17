@@ -1,7 +1,7 @@
 <tr class="nested-fields">
-  <td></td>
+  <td class="handle"></td>
   <td><%= f.text_field :name, class: "form-control" %></td>
   <td><%= f.text_field :start_date, class: "form-control", data: { controller: "flatpickr" } %></td>
   <td><%= f.text_field :end_date, class: "form-control", data: { controller: "flatpickr" } %></td>
-  <td><%= link_to_remove_association "削除", f, class: "btn btn-danger" %></td>
+  <td class="remove-btn-td"><%= link_to_remove_association f do %><i class="fa-regular fa-circle-xmark"></i><% end %></td>
 </tr>

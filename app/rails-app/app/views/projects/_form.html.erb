@@ -7,13 +7,13 @@
     <thead>
       <tr>
         <th>No</th>
-        <th><%= f.label :tasks_name %></th>
-        <th><%= f.label :tasks_start_date %></th>
-        <th><%= f.label :tasks_end_date %></th>
+        <th>タスク名</th>
+        <th>開始日</th>
+        <th>終了日</th>
         <th></th>
       </tr>
     </thead>
-    <tbody id="detail-association-insertion-point" data-controller="sortable">
+    <tbody id="insertion-point" data-controller="cocoon sortable">
       <%= f.fields_for :tasks do |task| %>
         <%= render "task_fields", f: task %>
       <% end %>
@@ -22,7 +22,7 @@
   <%= link_to_add_association "タスクを追加", f, :tasks,
     class: "btn btn-secondary",
     data: {
-      association_insertion_node: "#detail-association-insertion-point",
+      association_insertion_node: "#insertion-point",
       association_insertion_method: "append"
     }
   %>
